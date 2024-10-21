@@ -118,7 +118,7 @@ Run command:
 
 #### Screenshot:
 
-![Step 3: Modify User](Screenshots/step3-modify-user.png)
+<img src ="Screenshots/step3-modify-user.png" width = 640 height = 480>
 
 ---
 
@@ -146,7 +146,7 @@ Run command:
 
 #### Screenshot:
 
-![Step 4: Delete User](Screenshots/step4-delete-user.png)
+<img src ="Screenshots/step4-delete-user.png" width = 640 height = 480>
 
 ---
 
@@ -176,26 +176,7 @@ Run Command:
 ```
 #### Screenshot:
 
-![Step 5: Full Workflow](Screenshots/step5-full-workflow.png)
-
----
-
-## Screenshots Overview
-
-- **Importing the Active Directory Module**  
-  ![Import Active Directory Module](Screenshots/step1-import-module.png)
-
-- **Creating a New User**  
-  ![Create New User](Screenshots/step2-create-user.png)
-
-- **Modifying User Attributes**  
-  ![Modify User](Screenshots/step3-modify-user.png)
-
-- **Deleting a User Account**  
-  ![Delete User](Screenshots/step4-delete-user.png)
-
-- **Running the Full Workflow**  
-  ![Full Workflow](Screenshots/step5-full-workflow.png)
+<img src ="Screenshots/step5-full-workflow.png" width = 640 height = 480>
 
 ---
 
