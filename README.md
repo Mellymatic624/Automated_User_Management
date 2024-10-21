@@ -180,7 +180,7 @@ Run Command:
 
 ---
 
-### Summary
+## Summary
 
 This project is designed to automate Active Directory user management using PowerShell. By implementing these scripts, organizations can improve their administrative efficiency, ensuring accurate and consistent user management practices.
 
@@ -190,4 +190,7 @@ This project is designed to automate Active Directory user management using Powe
 
 We welcome contributions to enhance this project. Feel free to fork the repository, create a new branch, and submit a pull request.
 
+**Contact:**
+- Email: [larose.jamel.d@gmail.com](mailto:larose.jamel.d@gmail.com)
+- GitHub: [github.com/Mellymatic624](https://github.com/Mellymatic624)
 
