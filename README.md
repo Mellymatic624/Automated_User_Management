@@ -56,7 +56,7 @@ param (
     [string]$password = "Ch3wy!",
     [string]$firstName = "Al",
     [string]$lastName = "Dente",
-    [string]$OU = "OU=Users,DC=daquantum,DC=com"
+    [string]$OU = "OU=UserAccounts,DC=daquantum,DC=com"
 )
 
 # Import Active Directory Module
@@ -161,7 +161,7 @@ For complete user lifecycle management, you can run a master script that sequent
 Import-Module ActiveDirectory
 
 # Create User
-.\Create-User.ps1 -username "a-dente" -password "Ch3wy!" -firstName "Al" -lastName "Dente" -OU "OU=Users,DC=daquantum,DC=com"
+.\Create-User.ps1 -username "a-dente" -password "Ch3wy!" -firstName "Al" -lastName "Dente" -OU "OU=UserAccounts,DC=daquantum,DC=com"
 
 # Modify User
 .\Modify-User.ps1 -username "a-dente" -title "Sales Representative" -department "Sales"
