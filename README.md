@@ -47,6 +47,39 @@ Import-Module ActiveDirectory
 
 Run the user creation script to add new users to Active Directory. This step includes defining user details, such as username, password, and organizational unit (OU).
 
+```powershell
+# Create-User.ps1
+
+# Parameters
+param (
+    [string]$username = "a-dente",
+    [string]$password = "Ch3wy!",
+    [string]$firstName = "Al",
+    [string]$lastName = "Dente",
+    [string]$OU = "OU=Users,DC=daquantum,DC=com"
+)
+
+# Import Active Directory Module
+Import-Module ActiveDirectory
+
+# Create the user
+New-ADUser -SamAccountName $username `
+           -UserPrincipalName "$username@daquantum.com" `
+           -Name "$firstName $lastName" `
+           -GivenName $firstName `
+           -Surname $lastName `
+           -Path $OU `
+           -AccountPassword (ConvertTo-SecureString $password -AsPlainText -Force) `
+           -Enabled $true
+
+Write-Host "User $username created successfully."
+```
+
+Run command:
+```powershell
+.\Create-User.ps1
+```
+
 #### Screenshot:
 
 ![Step 2: Create a New User](Screenshots/step2-create-user.png)
@@ -56,6 +89,32 @@ Run the user creation script to add new users to Active Directory. This step inc
 ### Step 3: Modify User Attributes
 
 After a user has been created, you can modify their attributes. This script allows you to update various user details, ensuring they remain accurate and up to date.
+
+```powershell
+# Modify-User.ps1
+
+# Parameters
+param (
+    [string]$username = "a-dente",
+    [string]$title = "Sales Representative",
+    [string]$department = "Sales"
+)
+
+# Import Active Directory Module
+Import-Module ActiveDirectory
+
+# Modify the user
+Set-ADUser -Identity $username `
+           -Title $title `
+           -Department $department
+
+Write-Host "User $username modified successfully."
+```
+
+Run command:
+```powershell
+.\Modify-User.ps1
+```
 
 #### Screenshot:
 
@@ -67,6 +126,24 @@ After a user has been created, you can modify their attributes. This script allo
 
 When a user leaves the organization or no longer requires access, use the deletion script to remove their account from Active Directory.
 
+```powershell
+# Delete-User.ps1
+param (
+    [string]$username = "a-dente"
+)
+
+Import-Module ActiveDirectory
+
+Remove-ADUser -Identity $username -Confirm:$false
+
+Write-Host "User $username deleted successfully."
+```
+
+Run command:
+```powershell
+.\Delete-User.ps1
+```
+
 #### Screenshot:
 
 ![Step 4: Delete User](Screenshots/step4-delete-user.png)
@@ -77,6 +154,26 @@ When a user leaves the organization or no longer requires access, use the deleti
 
 For complete user lifecycle management, you can run a master script that sequentially executes user creation, modification, and deletion tasks, simplifying the process for bulk operations.
 
+```powershell
+# UserManagement.ps1
+
+# Import Active Directory Module
+Import-Module ActiveDirectory
+
+# Create User
+.\Create-User.ps1 -username "a-dente" -password "Ch3wy!" -firstName "Al" -lastName "Dente" -OU "OU=Users,DC=daquantum,DC=com"
+
+# Modify User
+.\Modify-User.ps1 -username "a-dente" -title "Sales Representative" -department "Sales"
+
+# Delete User
+.\Delete-User.ps1 -username "a-dente"
+```
+
+Run Command:
+```powershell
+.\UserManagement.ps1
+```
 #### Screenshot:
 
 ![Step 5: Full Workflow](Screenshots/step5-full-workflow.png)
