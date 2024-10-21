@@ -39,7 +39,7 @@ Import-Module ActiveDirectory
 
 #### Screenshot:
 
-![Step 1: Import Active Directory Module](Screenshots/step1-import-module.png)
+<img src ="Screenshots/step1-import-module.png" width = 640 height = 480>
 
 ---
 
@@ -82,8 +82,8 @@ Run command:
 
 #### Screenshot:
 
-![Step 2: Create a New User](Screenshots/step2-create-user.png)
-
+<img src ="Screenshots/step2-create-user.png" width = 640 height = 480>
+<img src ="Screenshots/step2-create-user2.png" width = 640 height = 480>
 ---
 
 ### Step 3: Modify User Attributes
