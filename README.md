@@ -2,6 +2,22 @@
 
 This project provides a comprehensive solution for managing Active Directory (AD) users through automation using PowerShell scripts. The scripts allow administrators to efficiently create, modify, and delete user accounts, significantly reducing manual effort and potential errors.
 
+## Table of Contents
+
+- [Project Goals](#project-goals)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Usage Instructions](#usage-instructions)
+  - [Step 1: Import the Active Directory Module](#step-1-import-the-active-directory-module)
+  - [Step 2: Create a New User](#step-2-create-a-new-user)
+  - [Step 3: Modify User Attributes](#step-3-modify-user-attributes)
+  - [Step 4: Delete a User Account](#step-4-delete-a-user-account)
+  - [Step 5: Full User Management Workflow](#step-5-full-user-management-workflow)
+- [Troubleshooting](#troubleshooting)
+- [Summary](#summary)
+- [Contributing](#contributing)
+
+
 ## Project Goals
 
 - **Streamline User Management:** Automate repetitive tasks associated with user account management in Active Directory.
@@ -177,6 +193,34 @@ Run Command:
 #### Screenshot:
 
 <img src ="Screenshots/step5-full-workflow.png" width = 640 height = 480>
+
+---
+
+## Troubleshooting
+
+### 1. Active Directory Module Not Loaded
+- **Issue**: The script fails with commands not recognized.
+- **Solution**: Ensure the Active Directory module is imported:
+    ```powershell
+    Import-Module ActiveDirectory
+    ```
+
+### 2. Directory Object Not Found
+- **Issue**: `New-ADUser` fails with "Directory object not found."
+- **Solution**: 
+    - Verify the Organizational Unit (OU) exists using:
+      ```powershell
+      Get-ADOrganizationalUnit -Filter *
+      ```
+    - Ensure the Distinguished Name (DN) format is correct: `OU=Users,DC=yourdomain,DC=com`.
+
+### 3. Permissions Issue
+- **Issue**: The script fails due to insufficient permissions.
+- **Solution**: Run PowerShell as an Administrator and ensure the executing account has the necessary privileges to create users in the specified OU.
+
+### 4. Password Policy Violation
+- **Issue**: User creation fails due to the password not meeting requirements.
+- **Solution**: Ensure the password meets your domain's complexity requirements (e.g., length, characters).
 
 ---
 
