@@ -3,10 +3,10 @@
 # Parameters
 param (
     [string]$username = "a-dente",
-    [string]$password = "Ch3wy!",
+    [string]$password = "Ch3wy45!",
     [string]$firstName = "Al",
     [string]$lastName = "Dente",
-    [string]$OU = "OU=Users,DC=daquantum,DC=com"
+    [string]$OU = "OU=UserAccounts,DC=daquantum,DC=com"
 )
 
 # Import Active Directory Module
