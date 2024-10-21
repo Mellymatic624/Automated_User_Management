@@ -180,16 +180,14 @@ Run Command:
 
 ---
 
+### Summary
+
+This project is designed to automate Active Directory user management using PowerShell. By implementing these scripts, organizations can improve their administrative efficiency, ensuring accurate and consistent user management practices.
+
+---
+
 ## Contributing
 
 We welcome contributions to enhance this project. Feel free to fork the repository, create a new branch, and submit a pull request.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more details.
-
----
-
-### Summary
-
-This project is designed to automate Active Directory user management using PowerShell. By implementing these scripts, organizations can improve their administrative efficiency, ensuring accurate and consistent user management practices.
