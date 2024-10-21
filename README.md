@@ -69,7 +69,7 @@ Run the user creation script to add new users to Active Directory. This step inc
 # Parameters
 param (
     [string]$username = "a-dente",
-    [string]$password = "Ch3wy!",
+    [string]$password = "Ch3wy45!",
     [string]$firstName = "Al",
     [string]$lastName = "Dente",
     [string]$OU = "OU=UserAccounts,DC=daquantum,DC=com"
@@ -177,7 +177,7 @@ For complete user lifecycle management, you can run a master script that sequent
 Import-Module ActiveDirectory
 
 # Create User
-.\Create-User.ps1 -username "a-dente" -password "Ch3wy!" -firstName "Al" -lastName "Dente" -OU "OU=UserAccounts,DC=daquantum,DC=com"
+.\Create-User.ps1 -username "a-dente" -password "Ch3wy45!" -firstName "Al" -lastName "Dente" -OU "OU=UserAccounts,DC=daquantum,DC=com"
 
 # Modify User
 .\Modify-User.ps1 -username "a-dente" -title "Sales Representative" -department "Sales"
